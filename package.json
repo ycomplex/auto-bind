@@ -13,10 +13,12 @@
 		"node": ">=6"
 	},
 	"scripts": {
+		"compile": "babel src --out-dir dist --retain-lines -d -q --source-maps",
 		"test": "xo && ava"
 	},
+	"main": "dist/index.js",
 	"files": [
-		"index.js"
+		"dist/index.js"
 	],
 	"keywords": [
 		"auto",
@@ -35,6 +37,11 @@
 	],
 	"devDependencies": {
 		"ava": "*",
-		"xo": "*"
+		"xo": "*",
+		"babel-cli": "^6.26.0",
+		"babel-eslint": "^8.2.5",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-env": "^1.6.1"
 	}
 }
